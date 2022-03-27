@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: black;
     padding: 0;
@@ -7,7 +12,7 @@ body {
 
 /* CABEÇALHO DA PÁGINA */
 .content {
-    width: 1000px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -25,24 +30,22 @@ header {
 }
 
 /* CORPO DA PÁGINA */
-main {
+section {
     background-image: url(./images/people.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
-    height: 550px;
+    overflow: hidden;
     margin: 0;
-    position: relative;
+    padding: 20px;
 }
 
 .subscribe {
     width: 250px;
     height: 85%;
     background-color: rgba(255, 255, 255, 0.692);
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
     padding: 20px;
     font-size: 17px;
+    float: right;
 }
 
 
@@ -51,26 +54,27 @@ h2 {
     margin: 0;
 }
 
-input {
+input, select {
     display: block;
     padding-left: 10px;
     width: 100%;
     height: 40px;
     margin: 10px 0;
     border: none;
+    box-sizing: border-box;
 }
-
 
 select {
-    display: block;
-    padding-left: 10px;
-    width: 100%;
-    height: 40px;
-    margin: 7px 0;
-    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(./images/arrow.jpg);
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 10px);
+    background-position-y: center;
 }
 
-#submit {
+input[type="submit"] {
     background-color: rgb(39, 154, 248);
     color: white;
     font-size: 15px;
@@ -82,6 +86,7 @@ select {
 footer {
     background-color: rgb(44, 44, 44);
     color: white;
+    text-align: center;
 }
 
 .footer_content {
@@ -97,13 +102,17 @@ img {
 }
 
 .about {
+    display: inline-block;
+    width: 46%;
     margin-left: 15px;
 }
 
-#autor {
+.about h2{
     font-size: 25px;
+    text-align: left;
 }
 
-.informations {
+.about p {
     font-size: 16px;
+    text-align: left;
 }
