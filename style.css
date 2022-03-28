@@ -68,8 +68,10 @@ select {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+
     background-image: url(./images/arrow.jpg);
     background-repeat: no-repeat;
+
     background-position-x: calc(100% - 10px);
     background-position-y: center;
 }
@@ -115,4 +117,87 @@ img {
 .about p {
     font-size: 16px;
     text-align: left;
+}
+
+/* Aviso ao final da página */
+.estudo{
+    background-color: rgb(255, 81, 81);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 0;
+    overflow: hidden;
+}
+
+.estudo p{
+    float: left;
+    padding-left: 15px;
+}
+
+.estudo ul {
+    list-style: none;
+    float: right;
+    padding-right: 15px;
+}
+
+.estudo li {
+    display: inline;
+}
+
+.estudo a {
+    color: rgb(255, 81, 81);
+    background-color: white;
+    text-decoration: none;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 460px) {
+    header{
+        font-size: 6px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    header {
+        font-size: 7.5px;
+    }
+
+    .estudo p{
+        float: none;
+    }
+
+    .estudo ul{
+        float: none;
+        padding: 5px 0 3px 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .subscribe {
+        float: none;
+        margin: 0 auto;
+    }
+
+    .footer_content {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    img {
+        float: none;
+        text-align: center;
+        margin: 0;
+    }
+
+    .about {
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+        margin: 0;
+    }
+
+    .about h2 {
+        text-align: center;
+    }
 }
